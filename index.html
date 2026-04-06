@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liang Luo</title>
+  <style>
+    :root {
+      --primary: #1a1a2e;
+      --accent: #16213e;
+      --link: #0f3460;
+      --bg: #f8f9fa;
+      --card: #ffffff;
+      --text: #333;
+      --muted: #666;
+      --border: #e0e0e0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+    header p { font-size: 1.1rem; opacity: 0.9; }
+    header a { color: #a8d8ea; }
+    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1rem; }
+    section { background: var(--card); border-radius: 8px; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    h2 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .entry { margin-bottom: 1.2rem; }
+    .entry:last-child { margin-bottom: 0; }
+    .entry-header { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: baseline; }
+    .entry-title { font-weight: 600; font-size: 1.05rem; }
+    .entry-meta { color: var(--muted); font-size: 0.9rem; }
+    .entry-detail { color: var(--muted); font-size: 0.95rem; margin-top: 0.15rem; }
+    .entry-desc { margin-top: 0.3rem; font-size: 0.95rem; }
+    .sub-entries { list-style: none; margin-top: 0.5rem; padding-left: 1rem; border-left: 2px solid var(--border); }
+    .sub-entries li { margin-bottom: 0.7rem; font-size: 0.95rem; }
+    .sub-entries li:last-child { margin-bottom: 0; }
+    .pub-list { list-style: none; }
+    .pub-list li { margin-bottom: 0.8rem; font-size: 0.93rem; line-height: 1.5; }
+    .pub-venue { font-weight: 600; color: var(--accent); }
+    .pub-note { color: var(--muted); font-style: italic; font-size: 0.88rem; }
+    .service-list { columns: 1; font-size: 0.93rem; }
+    .service-list li { margin-bottom: 0.4rem; }
+    footer { text-align: center; padding: 1.5rem; color: var(--muted); font-size: 0.85rem; }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      .entry-header { flex-direction: column; }
+      section { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Liang Luo</h1>
+  <p>Building smarter AI systems.</p>
+  <p><a href="mailto:liangluo@cs.washington.edu">liangluo@cs.washington.edu</a></p>
+</header>
+
+<div class="container">
+
+  <!-- Education -->
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">University of Washington, Seattle, WA</span>
+        <span class="entry-meta">PhD, March 2020</span>
+      </div>
+      <div class="entry-detail">Advisors: Prof. Luis Ceze and Prof. Arvind Krishnamurthy</div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">University of Pennsylvania, Philadelphia, PA</span>
+        <span class="entry-meta">MSE, May 2015</span>
+      </div>
+      <div class="entry-detail">Advisor: Prof. Joseph Devietti</div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Nankai University, Tianjin, China</span>
+        <span class="entry-meta">BE, June 2013</span>
+      </div>
+      <div class="entry-detail">National Scholarship 2011</div>
+    </div>
+  </section>
+
+  <!-- Work Experience -->
+  <section>
+    <h2>Work Experience</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Facebook &mdash; Senior Staff Research Scientist</span>
+        <span class="entry-meta">2020 &ndash; Present</span>
+      </div>
+      <div class="entry-desc">Research and development in system/model co-design for AI workloads.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">University of Washington &mdash; Research Assistant</span>
+        <span class="entry-meta">2015 &ndash; 2020</span>
+      </div>
+      <div class="entry-desc">Conducted research in the SAMPA, SAMPL and Systems lab, focusing on building systems for more efficient communication in a shared, dynamic environment.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">University of Pennsylvania &mdash; Research Assistant</span>
+        <span class="entry-meta">2014 &ndash; 2015</span>
+      </div>
+      <div class="entry-desc">Research on lightweight sharing detection on x86 processors.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Microsoft</span>
+        <span class="entry-meta">2012 &ndash; 2017</span>
+      </div>
+      <ul class="sub-entries">
+        <li><strong>Researcher Intern, Systems Research</strong> <span class="entry-meta">(Redmond, 2017)</span><br>Parameter Hub: Balancing Compute and Communication for Efficient Parameter Servers.</li>
+        <li><strong>Researcher Intern, Mobility and Networking Research</strong> <span class="entry-meta">(Redmond, 2016)</span><br>AUDIT: Troubleshooting Production Systems with Blame-proportional Logging.</li>
+        <li><strong>Software Engineering Intern, Kernel Platform Group</strong> <span class="entry-meta">(2015)</span><br>X86 Emulation on ARM-based Windows 10 Devices.</li>
+        <li><strong>Software Engineering Intern, Operating Systems Group</strong> <span class="entry-meta">(2014)</span><br>Always-on configuration monitor for XBOX Key Management Service (XKMS).</li>
+        <li><strong>Software Engineering Intern, Search Technology Center</strong> <span class="entry-meta">(Beijing, 2012)</span><br>DHTs and Dynamic Code Injection; Distributed Storage System.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">AMD</span>
+        <span class="entry-meta">Beijing, 2012</span>
+      </div>
+      <ul class="sub-entries">
+        <li><strong>Contractor, Heterogeneous Application Solutions</strong><br>Accelerating multimedia apps with OpenCL.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section>
+    <h2>Peer-Reviewed Publications</h2>
+    <p style="font-size:0.9rem; color:var(--muted); margin-bottom:1rem;">*: equal contribution</p>
+
+    <h3 style="font-size:1rem; margin-bottom:0.8rem; color:var(--accent);">Journal Publications</h3>
+    <ul class="pub-list">
+      <li>
+        <span class="pub-venue">[TMLR'25 J2C Award]</span> Mixture-of-Transformers: A Sparse and Scalable Architecture for Multi-Modal Foundation Models.
+        Weixin Liang, Lili Yu*, <strong>Liang Luo</strong>*, Srinivasan Iyer, Ning Dong, Chunting Zhou, Gargi Ghosh, Mike Lewis, Wen-tau Yih, Luke Zettlemoyer, Xi Victoria Lin.
+        <div class="pub-note">Powering Meta Segment Anything 3, ByteDance Mogao and Bagel, Xiaomi-Robotics-0</div>
+      </li>
+      <li>
+        <span class="pub-venue">[IEEE TPDS 2023]</span> P4SGD.
+        Hongjing Huang, Yingtao Li, Jie Sun, Xueying Zhu, Jie Zhang, <strong>Liang Luo</strong>, Jialin Li, Zeke Wang.
+      </li>
+      <li>
+        <span class="pub-venue">[IEEE Micro 2017]</span> IncBricks: Enables in-network computation with a programmable network middlebox.
+        Ming Liu, <strong>Liang Luo</strong>, Jacob Nelson, Arvind Krishnamurthy, Luis Ceze.
+        <div class="pub-note">Selected as MICRO Top Picks 2018 Honorable Mention</div>
+      </li>
+    </ul>
+
+    <h3 style="font-size:1rem; margin: 1.2rem 0 0.8rem; color:var(--accent);">Conference Publications</h3>
+    <ul class="pub-list">
+      <li><span class="pub-venue">[ACL'26 Findings]</span> ReasonRec: A Reasoning-Augmented Multimodal Agent for Unified Recommendation. Yihua Zhang, Mingfu Liang, Jiyan Yang, Rong Jin, Wen-Yen Chen, Yiping Han, Huayu Li, Buyun Zhang, <strong>Liang Luo</strong>, Luke Simon, Sijia Liu, Tianlong Chen, Xi Liu.</li>
+      <li><span class="pub-venue">[SIGIR'26]</span> SOLARIS: Speculative Offloading of Latent-bAsed Representation for Inference Scaling. Zikun Liu, <strong>Liang Luo</strong>, Qianru Li, Zhengyu Zhang, Wei Ling, Jingyi Shen, Zeliang Chen, Yaning Huang, Jingxian Huang, Abdallah Aboelela, Chonglin Sun, Feifan Gu, Fenggang Wu, Hang Qu, Huayu Li, Jill Pan, Kaidi Pei, Laming Chen, Longhao Jin, Qin Huang, Tongyi Tang, Varna Puvvada, Wenlin Chen, Xiaohan Wei, Xu Cao, Yantao Yao, Yuan Jin, Yunchen Pu, Yuxin Chen, Zijian Shen, Zhengkai Zhang, Dong Liang, Ellie Wen. <div class="pub-note">Powering Meta's Ads Recommendation.</div></li>
+      <li><span class="pub-venue">[MLSys'26]</span> FreeScale: Distributed Training for Sequence Recommendation Models with Minimal Scaling Cost. Chenhao Feng, Haoli Zhang, Shakhzod Ali-Zade, Yanli Zhao, <strong>Liang Luo</strong>, Jennifer Cao, Lisen Deng, Siqiao Chen, Chenyu Zhao, Tristan Rice, Daniel Johnson, Min Si, Tiantu Xu, Yi Zhang, Evgenii Kolpakov, Siqi Yan, Chunhao Zhuge, Min Ni, Bi Xue, Qunshu Zhang, Shen Li. <div class="pub-note">Powering Meta's Feeds Recommendation.</div></li>
+      <li><span class="pub-venue">[KDD'26]</span> Meta Lattice: Model Space Redesign for Cost-Effective Industry-Scale Ads Recommendations. <strong>Liang Luo</strong>, Yuxin Chen, Zhengyu Zhang, Mengyue Hang, Andrew Gu, Buyun Zhang, Boyang Liu, Chen Chen, Chengze Fan, Dong Liang, Fan Yang, Feifan Gu, Huayu Li, Jade Nie, Jiayi Xu, Jiyan Yang, Jongsoo Park, Laming Chen, Longhao Jin, Qianru Li, Qin Huang, Shali Jiang, Shiwen Shen, Shuaiwen Wang, Sihan Zeng, Siyang Yuan, Tongyi Tang, Weilin Zhang, Wenjun Wang, Xi Liu, Xiaohan Wei, Xiaozhen Xia, Yuchen Hao, Yunlong He, Yasmine Badr, Zeliang Chen, Maxim Naumov, Yantao Yao, Wenlin Chen, Santanu Kolay, GP Musumeci, Ellie Dingqiao Wen. <div class="pub-note">Powering Meta's Ads Recommendation.</div></li>
+      <li><span class="pub-venue">[NSDI'26]</span> Phantora: Maximizing Code Reuse in Simulation-based Machine Learning System Performance Estimation. Jianxing Qin, Jingrong Chen, Xinhao Kong, Yongji Wu, Tianjun Yuan, <strong>Liang Luo</strong>, Zhaodong Wang, Ying Zhang, Tingjun Chen, Alvin R. Lebeck, Danyang Zhuo.</li>
+      <li><span class="pub-venue">[VLDB'25]</span> DECK: Experiences on Delta Checkpointing for Industrial Recommendation Systems. Xin Gao, Sibu Acharya, Sihui Han, Yongxiong Ren, Yanli Zhao, <strong>Liang Luo</strong>, Chucheng Wang, Pradeep Fernando, Saurabh Mishra, Siqi Yan, Yicong Du, Ela Krepska, Intaik Park, Min Ni, Qunshu Zhang, Shen Li. <div class="pub-note">Powering Meta's Feeds Recommendation.</div></li>
+      <li><span class="pub-venue">[ACL'25]</span> The Efficiency vs. Accuracy Trade-off: Optimizing RAG-Enhanced LLM Recommender Systems Using Multi-Head Early Exit. Huixue Zhou, Hengrui Gu, Zaifu Zhan, Xi Liu, Kaixiong Zhou, Yongkang Xiao, Mingfu Liang, Srinivas Prasad Govindan, Piyush Chawla, Jiyan Yang, Xiangfei Meng, Huayu Li, Buyun Zhang, <strong>Liang Luo</strong>, Wen-Yen Chen, Yiping Han, Bo Long, Rui Zhang, Tianlong Chen.</li>
+      <li><span class="pub-venue">[WWW'25]</span> External large foundation model: How to efficiently serve trillions of parameters for online ads recommendation. Mingfu Liang, Xi Liu, Rong Jin, Boyang Liu, Qiuling Suo, Qinghai Zhou, Song Zhou, Laming Chen, Hua Zheng, Zhiyuan Li, Shali Jiang, Jiyan Yang, Xiaozhen Xia, Fan Yang, Yasmine Badr, Ellie Wen, Shuyu Xu, Hansey Chen, Zhengyu Zhang, Jade Nie, Chunzhi Yang, Zhichen Zeng, Weilin Zhang, Xingliang Huang, Qianru Li, Shiquan Wang, Evelyn Lyu, Wenjing Lu, Rui Zhang, Wenjun Wang, Jason Rudy, Mengyue Hang, Kai Wang, Yinbin Ma, Shuaiwen Wang, Sihan Zeng, Tongyi Tang, Xiaohan Wei, Longhao Jin, Jamey Zhang, Marcus Chen, Jiayi Zhang, Angie Huang, Chi Zhang, Zhengli Zhao, Jared Yang, Qiang Jin, Xian Chen, Amit Anand Amlesahwaram, Lexi Song, <strong>Liang Luo</strong>, Yuchen Hao, Nan Xiao, Yavuz Yetim, Luoshang Pan, Gaoxiang Liu, Yuxi Hu, Yuzhen Huang, Jackie Xu, Rich Zhu, Xin Zhang, Yiqun Liu, Hang Yin, Yuxin Chen, Buyun Zhang, Xiaoyi Liu, Xingyuan Wang, Wenguang Mao, Zhijing Li, Qin Huang, Chonglin Sun, Nancy Yu, Shuo Gu, Shupin Mao, Benjamin Au, Jingzheng Qin, Peggy Yao, Jae-Woo Choi, Bin Gao, Ernest Wang, Lei Zhang, Wen-Yen Chen, Ted Lee, Jay Zha, Yi Meng, Alex Gong, Edison Gao, Alireza Vahdatpour, Yiping Han, Yantao Yao, Toshinari Kureha, Shuo Chang, Musharaf Sultan, John Bocharov, Sagar Chordia, Xiaorui Gan, Peng Sun, Rocky Liu, Bo Long, Wenlin Chen, Santanu Kolay, Huayu Li.</li>
+      <li><span class="pub-venue">[ICML 2024]</span> Wukong: Towards a Scaling Law for Large-Scale Recommendation. Buyun Zhang*, <strong>Liang Luo</strong>*, Yuxin Chen*, Jade Nie, Xi Liu, Daifeng Guo, Yanli Zhao, Shen Li, Yuchen Hao, Yantao Yao, Guna Lakshminarayanan, Ellie Dingqiao Wen, Jongsoo Park, Maxim Naumov, Wenlin Chen. <div class="pub-note">Powering Meta's Ads Recommendation.</div></li>
+      <li><span class="pub-venue">[MLSys 2024]</span> Disaggregated Multi-Tower: A topology-aware modeling technique for efficient large-scale recommendation. <strong>Liang Luo</strong>, Buyun Zhang, Michael Tsang, Yinbin Ma, Ching-Hsiang Chu, Yuxin Chen, Shen Li, Yuchen Hao, Yanli Zhao, Guna Lakshminarayanan, Ellie Dingqiao Wen, Jongsoo Park, Dheevatsa Mudigere, Maxim Naumov.</li>
+      <li><span class="pub-venue">[VLDB 2023]</span> PyTorch FSDP. Yanli Zhao, Andrew Gu, Rohan Varma, <strong>Liang Luo</strong>, Chien-Chin Huang, Min Xu, Less Wright, Hamid Shojanazeri, Myle Ott, Sam Shleifer, Alban Desmaison, Can Balioglu, Bernard Nguyen, Geeta Chauhan, Yuchen Hao, Shen Li. <div class="pub-note">Runner-up Best Paper Award (Industry Track)</div></li>
+      <li><span class="pub-venue">[MLSys 2023]</span> NeuroShard: Learning to shard embedding tables with a pre-trained cost model. Daochen Zha, Louis Feng, <strong>Liang Luo</strong>, Bhargav Bhushanam, Zirui Liu, Yusuo Hu, Jade Nie, Yuzhen Huang, Yuandong Tian, Arun Kejariwal, Xia Hu.</li>
+      <li><span class="pub-venue">[MLSys 2022]</span> SRIFTY: A throughput and cost Optimizer for public cloud-based distributed training. <strong>Liang Luo</strong>, Peter West, Pratyush Patel, Arvind Krishnamurthy, Luis Ceze.</li>
+      <li><span class="pub-venue">[ISCA 2022]</span> NEO: Software-Hardware Co-design for Fast and Scalable Training of Deep Learning Recommendation Models. Dheevatsa Mudigere, Yuchen Hao, Jianyu Huang, Zhihao Jia, Andrew Tulloch, Srinivas Sridharan, Xing Liu, Mustafa Ozdal, Jade Nie, Jongsoo Park, <strong>Liang Luo</strong>, Jie (Amy) Yang, Leon Gao, Dmytro Ivchenko, Aarti Basant, Yuxi Hu, Jiyan Yang, Ehsan K. Ardestani, Xiaodong Wang, Rakesh Komuravelli, Ching-Hsiang Chu, Serhat Yilmaz, Huayu Li, Jiyuan Qian, Zhuobo Feng, Yinbin Ma, Junjie Yang, Ellie Wen, Hong Li, Lin Yang, Chonglin Sun, Whitney Zhao, Dimitry Melts, Krishna Dhulipala, KR Kishore, Tyler Graf, Assaf Eisenman, Kiran Kumar Matam, Adi Gangidi, Guoqiang Jerry Chen, Manoj Krishnan, Avinash Nayak, Krishnakumar Nair, Bharath Muthiah, Mahmoud Khorashadi, Pallab Bhattacharya, Petr Lapukhov, Maxim Naumov, Ajit Mathews, Lin Qiao, Mikhail Smelyanskiy, Bill Jia, Vijay Rao.</li>
+      <li><span class="pub-venue">[NSDI 2022]</span> NetHint: White-Box Networking for Multi-Tenant Data Centers. Jingrong Chen, Hong Zhang, Wei Zhang, <strong>Liang Luo</strong>, Jeffery Chase, Ion Stoica, Danyang Zhuo.</li>
+      <li><span class="pub-venue">[IISWC 2021]</span> Characterizing and Taming Resolution in Convolutional Neural Networks. Eddie Yan, <strong>Liang Luo</strong>, Luis Ceze.</li>
+      <li><span class="pub-venue">[MLSys 2020]</span> PLINK: Discovers and exploits datacenter network locality for efficient communication in cloud-based systems. <strong>Liang Luo</strong>, Peter West, Arvind Krishnamurthy, Luis Ceze, Jacob Nelson.</li>
+      <li><span class="pub-venue">[USENIX ATC 2018]</span> AUDIT: Troubleshoots transiently recurring errors in production systems with blame-proportional logging. <strong>Liang Luo</strong>, Lenin Ravindranath Sivalingam, Suman Nath, Madan Musuvathi, Luis Ceze.</li>
+      <li><span class="pub-venue">[ACM SoCC 2018]</span> Parameter Hub: Efficient software stack implementation for rack-level parameter servers. <strong>Liang Luo</strong>, Jacob Nelson, Luis Ceze, Amar Phanishayee, Arvind Krishnamurthy.</li>
+      <li><span class="pub-venue">[MLSys 2018]</span> Parameter Box: High performance parameter servers with balanced resource allocation. <strong>Liang Luo</strong>, Jacob Nelson, Luis Ceze, Amar Phanishayee, Arvind Krishnamurthy.</li>
+      <li><span class="pub-venue">[ACM ASPLOS 2017]</span> IncBricks: Enables in-network computation with a programmable network middlebox. Ming Liu, <strong>Liang Luo</strong>, Jacob Nelson, Arvind Krishnamurthy, Luis Ceze.</li>
+      <li><span class="pub-venue">[IEEE HPCA 2016]</span> LASER: Uses PEBs events for sharing detection and online repair of false sharing with low overhead. <strong>Liang Luo</strong>, Akshitha Sriraman, Brooke Fugate, Shiliang Hu, Gilles Pokam, Chris Newburn, Joseph Devietti.</li>
+    </ul>
+
+    <h3 style="font-size:1rem; margin: 1.2rem 0 0.8rem; color:var(--accent);">Workshop Publications and Preprints</h3>
+    <ul class="pub-list">
+      <li>MoMa: Efficient Early-Fusion Pre-training with Mixture of Modality-Aware Experts. Xi Victoria Lin, Akshat Shrivastava, <strong>Liang Luo</strong>, Srinivasan Iyer, Mike Lewis, Gargi Ghosh, Luke Zettlemoyer, Armen Aghajanyan.</li>
+      <li><span class="pub-venue">[ICML'25 Workshop]</span> ReasonRec: A Reasoning-Augmented Multimodal Agent for Unified Recommendation. Yihua Zhang, Xi Liu, Xihuan Zeng, Mingfu Liang, Jiyan Yang, Rong Jin, Wen-Yen Chen, Yiping Han, Hao Ma, Bo Long, Huayu Li, Buyun Zhang, <strong>Liang Luo</strong>, Sijia Liu, Tianlong Chen.</li>
+      <li><span class="pub-venue">[KDD DLP 2022]</span> DHEN: A Deep and Hierarchical Ensemble Network for Large-Scale Click-Through Rate Prediction. Buyun Zhang*, <strong>Liang Luo</strong>*, Xi Liu, Jay Li, Zeliang Chen, Weilin Zhang, Xiaohan Wei, Yuchen Hao, Michael Tsang, Wenjun Wang, Yang Liu, Huayu Li, Yasmine Badr, Jongsoo Park, Jiyan Yang, Dheevatsa Mudigere, Ellie Wen.</li>
+      <li><span class="pub-venue">[ASPLOS WAX 2017]</span> INA: Motivates in-network aggregation for accelerating data-intensive applications. <strong>Liang Luo</strong>, Ming Liu, Jacob Nelson, Amar Phanishayee, Arvind Krishnamurthy, Luis Ceze.</li>
+      <li>Accelerating SpMM Kernel with Cache-First Edge Sampling for GNN Inference. Chien-Yu Lin, <strong>Liang Luo</strong>, Luis Ceze.</li>
+      <li>Cloud Collectives: Towards Cloud-aware Collectives for ML Workloads with Rank Reordering. <strong>Liang Luo</strong>, Jacob Nelson, Arvind Krishnamurthy, Luis Ceze.</li>
+    </ul>
+  </section>
+
+  <!-- Community Service -->
+  <section>
+    <h2>Community Service</h2>
+    <ul class="service-list">
+      <li>Program Committee, MLSys, 2023&ndash;2026</li>
+      <li>Program Committee, IISWC 2024</li>
+      <li>Reviewer, Journal of Future Generation Computer Systems, 2023</li>
+      <li>Reviewer, MLSys workshop at NeurIPS, 2023&ndash;2025</li>
+      <li>External Reviewer, SIGKDD, 2022</li>
+      <li>External Reviewer, Design Automation Conference (DAC), 2021</li>
+      <li>Editor of Journal of System Research, 2021</li>
+      <li>External Reviewer, IEEE VEE, 2021</li>
+      <li>Reviewer, IEEE Transactions on Services Computing, 2021, 2023</li>
+      <li>Program Committee, ML for Computer Architecture and Systems at ISCA, 2021</li>
+      <li>External Reviewer, ACM SoCC 2021</li>
+      <li>External Program Committee, ACM ASPLOS, 2021</li>
+      <li>External Reviewer, MLSys, 2022</li>
+    </ul>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 Liang Luo
+</footer>
+
+</body>
+</html>
